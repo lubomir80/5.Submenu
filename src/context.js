@@ -8,16 +8,19 @@ const AppProvider = ({ children }) => {
    const sidebarRef = useRef()
    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
+
    const [location, setLocation] = useState({})
    const [page, setPage] = useState({ page: "", links: [] })
 
 
    const onOpenSidebar = () => {
-      sidebarRef.current.showModal()
+      sidebarRef.current.showModal();
+      document.body.classList.add("lock")
    }
 
    const onCloseSidebar = () => {
-      sidebarRef.current.close()
+      sidebarRef.current.close();
+      document.body.classList.remove("lock")
    }
 
    const onOpenSubmenu = (text, coordinates) => {

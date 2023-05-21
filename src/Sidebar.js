@@ -12,6 +12,7 @@ function Sidebar() {
             className="btn-burger btn-hover icon"
          ><RiCloseFill />
          </button>
+
          <div className='sidebar__links'>
             {sublinks.map((item, index) => {
                const { page, links } = item;
@@ -28,6 +29,7 @@ function Sidebar() {
                )
             })}
          </div>
+
       </dialog>
    )
 }
